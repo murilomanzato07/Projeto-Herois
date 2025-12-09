@@ -1,11 +1,17 @@
+
+
+// Nome do Arquivo: batalha.java
+
 import java.util.Scanner;
 public class batalha {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        combatente j1 = null;
+        // Usa a classe abstrata como tipo de referência (Polimorfismo)
+        combatente j1 = null; 
         combatente j2 = null;
+
         for (;;) {
-    
             System.out.println("=====================");
             System.out.println("/////////DC X DC\\\\\\\\\\");
             System.out.println("1- Selecionar lutadores ");
@@ -46,11 +52,10 @@ public class batalha {
                 System.out.println("Numero Invalido!!");
                 continue;
             }
-
         }
     }
-    public static void iniciarBatalha(combatente j1, combatente j2, Scanner sc) {
 
+    public static void iniciarBatalha(combatente j1, combatente j2, Scanner sc) {
         combatente atacante = j1;
         combatente defensor = j2;
         int turno = 1;
@@ -58,6 +63,8 @@ public class batalha {
        while (j1.getVida() > 0 && j2.getVida() > 0) {
             System.out.println(" TURNO - " + turno + " -");
 
+            // O método moveset chamado aqui será o moveset ESPECÍFICO 
+            // do tipo de objeto em 'atacante' (Superman, Batman ou Darkside).
             atacante.moveset(defensor); 
             
             // Troca de papéis
@@ -70,13 +77,13 @@ public class batalha {
             j2.exibirStatus();
         
     }
+    
     if (j1.getVida() > j2.getVida()) {
         System.out.println("Vitoria do Jogador 1!");
     }else if (j1.getVida() < j2.getVida()) {
         System.out.println("Vitoria do Jogador 2!");
     }else{
-        System.out.println("EMPATE entre os Jogadores 1  e 2!!");
+        System.out.println("EMPATE entre os Jogadores 1 e 2!!");
     }
- }
-
+}
 }

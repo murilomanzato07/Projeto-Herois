@@ -1,27 +1,26 @@
-public class superman extends combatente{
-    
-    public superman(){
-        super("Superman", 20, 3, 1);
-    }
-    public void moveset(combatente alvo){
-        
-        int op = generator.nextInt(3);
-        int dano = getAtaque();
-        String nomeAtaque;
+// Nome do arquivo: superman.java
 
-        if (op == 0) {// soco base
-            nomeAtaque = "Soco";
-            this.setNomeAtaque(nomeAtaque);
-            this.ataque(alvo,dano,1);
-        }else if(op == 1){// ataque 1
-            nomeAtaque = "Raio Lazer";
-            this.setNomeAtaque(nomeAtaque);
-            this.ataque(alvo, dano,2);
-        }else if (op == 2) {// ataque 2
-            nomeAtaque = "Supro Congelante";
-            this.setNomeAtaque(nomeAtaque);
-            this.ataque(alvo,dano,3);
+public class superman extends combatente {
+
+    public superman(){
+        super("Superman", 30, 3, 2); 
+    }
+    
+    @Override 
+    public void moveset(combatente alvo){
+        java.util.Random generator = new java.util.Random(); 
+        int op = generator.nextInt(3);
+        
+        if (op == 0) { // Soco Rápido
+            this.setNomeAtaque("Soco Rápido");
+            // Usa as interfaces IStatus
+            this.ataques.ataque(this.status, alvo.getStatus(), 1);
+        }else if(op == 1){ // Visão de Calor
+            this.setNomeAtaque("Visão de Calor");
+            this.ataques.ataque(this.status, alvo.getStatus(), 3);
+        }else if (op == 2) { // Sopro Congelante
+            this.setNomeAtaque("Sopro Congelante");
+            this.ataques.ataque(this.status, alvo.getStatus(), 2);
         }
     }
-    
 }

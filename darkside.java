@@ -1,23 +1,26 @@
-public class darkside extends combatente{
-    public darkside(){
-        super("Darkside", 20, 4, 5);
-    }
-    public void moveset(combatente alvo){
-        int op = generator.nextInt(3);
-        int dano = getAtaque();
+// Nome do arquivo: darkside.java
 
-        if (op == 0) {// soco base
-            nomeAtaque = "Soco";
-            this.setNomeAtaque(nomeAtaque);
-            this.ataque(alvo,dano,1);
-        }else if(op == 1){// ataque 1
-            nomeAtaque = "Raios Omega";
-            this.setNomeAtaque(nomeAtaque);
-            this.ataque(alvo, dano,2);
-        }else if (op == 2) {// ataque 2
-            nomeAtaque = "Equacao Anti-Vida";
-            this.setNomeAtaque(nomeAtaque);
-            this.ataque(alvo,dano,3);
+public class darkside extends combatente {
+
+    public darkside(){
+        super("Darkside", 40, 4, 3); 
+    }
+    
+    @Override 
+    public void moveset(combatente alvo){
+        java.util.Random generator = new java.util.Random(); 
+        int op = generator.nextInt(3);
+        
+        if (op == 0) { // Soco de Força
+            this.setNomeAtaque("Soco de Força");
+            // Usa as interfaces IStatus
+            this.ataques.ataque(this.status, alvo.getStatus(), 1);
+        }else if(op == 1){ // Raio Ômega
+            this.setNomeAtaque("Raio Ômega");
+            this.ataques.ataque(this.status, alvo.getStatus(), 4);
+        }else if (op == 2) { // Força Apokolips
+            this.setNomeAtaque("Força Apokolips");
+            this.ataques.ataque(this.status, alvo.getStatus(), 2);
         }
     }
 }
