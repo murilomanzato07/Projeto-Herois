@@ -1,5 +1,3 @@
-
-
 // Nome do Arquivo: batalha.java
 
 import java.util.Scanner;
