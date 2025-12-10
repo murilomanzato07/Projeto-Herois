@@ -1,1 +1,6 @@
 "# Projeto-Herois" 
+https://miro.com/welcomeonboard/OS9vYnJJYVJDUW8xMi9NQkNWVWJpcWZJcG4xdVA5U3NmQXVCTG5qbmF0YmJBR05ERzUvQkNsN29GMEZoOHJyV2dJZmw5MERMNDZyYmxZYyt1cWpkZlNmVHJxOGpsL0RkUU5RSXY5YnEvdldTZkl2cHFuR3YycGYvSEplWVRSUVZBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=972040557340
+link do diagrama
+
+https://www.canva.com/design/DAG7De2f_MQ/L9EVAYa2GyPKrr-n3XgB6w/edit
+link dos slides
